@@ -1,3 +1,3 @@
-# seraphine
+## seraphine
 
-A react component library.
+#### A React Component Library

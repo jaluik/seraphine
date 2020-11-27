@@ -4,7 +4,7 @@ export type ButtonProps = React.ButtonHTMLAttributes<any>;
 
 const Button: FC<ButtonProps> = (props) => {
   const { children } = props;
-  return <button>{children}</button>;
+  return <button {...props}>{children}</button>;
 };
 
 Button.displayName = 'Button';
