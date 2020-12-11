@@ -54,6 +54,7 @@ module.exports = {
       '@components': path.resolve(PROJECT_PATH, './src/components'),
       '@utils': path.resolve(PROJECT_PATH, './src/utils'),
       '@images': path.resolve(PROJECT_PATH, './src/images'),
+      '@styles': path.resolve(PROJECT_PATH, './src/components/styles'),
     },
   },
 
@@ -74,8 +75,11 @@ module.exports = {
           ...getCssLoaders(2),
           {
             loader: 'less-loader',
-            options: {
-              sourceMap: isDev,
+            options: (loaderContext) => {
+              console.log(loaderContext);
+              return {
+                sourceMap: isDev,
+              };
             },
           },
         ],
