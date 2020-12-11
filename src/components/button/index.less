@@ -1,7 +1,44 @@
-@import '../styles/variable.less';
+@import '@styles/variable.less';
 
-@prefix: seraphine-btn;
+@prefix: .seraphine-btn;
 
-.seraphine-btn {
+@{prefix} {
+  border: none;
+  color: #fff;
+  padding: @padding-vertical-md @padding-horizontal-md;
+  font-size: @font-size-md;
   background-color: @primary-color;
+  border-radius: @border-radius-md;
+  &:active {
+    background-color: darken(@primary-color, 15%);
+    border: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@{prefix}-sm {
+  padding: @padding-vertical-sm @padding-horizontal-sm;
+  border-radius: @border-radius-sm;
+  font-size: @font-size-sm;
+}
+@{prefix}-lg {
+  padding: @padding-vertical-lg @padding-horizontal-lg;
+  border-radius: @border-radius-lg;
+  font-size: @font-size-lg;
+}
+@{prefix}-warning {
+  background-color: @warn-color;
+  &:active {
+    background-color: darken(@warn-color, 15%);
+    border: none;
+  }
+}
+@{prefix}-error {
+  background-color: @error-color;
+  &:active {
+    background-color: darken(@error-color, 15%);
+    border: none;
+  }
 }

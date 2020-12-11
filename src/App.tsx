@@ -4,7 +4,11 @@ import Button from '@components/button/button';
 export default () => {
   return (
     <div>
-      <Button>hello</Button>
+      <Button size='small'>hello</Button>
+      <Button size='middle'>hello</Button>
+      <Button size='large' type='error'>
+        hello
+      </Button>
     </div>
   );
 };

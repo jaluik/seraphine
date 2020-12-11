@@ -75,11 +75,10 @@ module.exports = {
           ...getCssLoaders(2),
           {
             loader: 'less-loader',
-            options: (loaderContext) => {
-              console.log(loaderContext);
-              return {
+            options: {
+              lessOptions: {
                 sourceMap: isDev,
-              };
+              },
             },
           },
         ],
