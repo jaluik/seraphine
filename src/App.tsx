@@ -9,6 +9,9 @@ export default () => {
       <Button size='large' type='error'>
         hello
       </Button>
+      <Button shape='circle' type='error'>
+        hello
+      </Button>
     </div>
   );
 };
