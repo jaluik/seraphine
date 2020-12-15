@@ -12,7 +12,15 @@ export type ButtonProps = Omit<React.ButtonHTMLAttributes<any>, 'type'> & {
 const prefix = 'seraphine-btn';
 
 const Button: FC<ButtonProps> = (props) => {
-  const { type, size, children, shape, htmlType, ...restProps } = props;
+  const {
+    className,
+    type,
+    size,
+    children,
+    shape,
+    htmlType,
+    ...restProps
+  } = props;
   return (
     <button
       className={classNames(prefix, {
@@ -22,6 +30,7 @@ const Button: FC<ButtonProps> = (props) => {
         [`${prefix}-sm`]: size === 'small',
         [`${prefix}-lg`]: size === 'large',
         [`${prefix}-circle`]: shape === 'circle',
+        className,
       })}
       type={htmlType}
       {...restProps}>

@@ -1,0 +1,14 @@
+@import '@styles/variable.less';
+
+@prefix: .seraphine-input;
+
+@{prefix} {
+  border-radius: @border-radius-base;
+  border: 1px solid @primary-color;
+  padding: @padding-vertical-md;
+  &:focus {
+    border-radius: @border-radius-base;
+    border: 1px solid @primary-color;
+    outline: none;
+  }
+}
